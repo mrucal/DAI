@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block head %}
+<style>
+header {
+    width:450;
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+    height: 150px;
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+
+#cabecera {
+    width: 450;
+
+}
+
+#imagen {
+    width: 10%;
+    float:left;
+    height: 150px;
+}
+
+#titulo {
+    width: 60%;
+    float:left;
+    text-align: center;
+}
+
+#formulario {
+    width: 30%;
+    float:left;
+}
+</style>
+{% endblock %}
+
+{% block header %}
+<div id="cabecera">
+    <div id="imagen">
+        <a href="/"><img src="/static/logo.png" /></a>
+    </div>
+
+    <div id="titulo">
+        <h1>Mi Página</h1>
+        <h3>Subtítulo</h3>
+    </div>
+
+    <div id="formulario">
+        <form action="" method="post">
+            <p><input type="text" name="username"/></p>
+            <p><input type="submit" value="Login"/></p>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block nav %}
+Opción 1<br>
+Opción 2<br>
+Opción 3
+{% endblock %}
+
+{% block section %}
+    <h1>Título</h1>
+	<p>Párrafo 1</p>
+	<p>Párrafo 2</p>
+    
+{% endblock %}
+
+{% block footer %}
+Copyright
+{% endblock %}

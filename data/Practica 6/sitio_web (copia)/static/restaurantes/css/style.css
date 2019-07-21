@@ -1,0 +1,152 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    text-align:center;
+    padding:5px;	 
+    height: 20%;
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:75%;
+    width:20%;
+    float:left;
+    padding:5px;	
+    position: relative;      
+}
+section {
+    width:80%;
+    height:75%;
+    float:left;
+    padding:10px;
+}
+footer {
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+    height:5%;	 	 
+}
+
+#cabecera {
+    height: 100%;
+    margin-top: 0.5%;
+}
+
+#imagen {
+    width: 10%;
+    float:left;
+    height: 150px;
+}
+
+#titulo {
+    width: 60%;
+    float:left;
+    text-align: center;
+}
+
+#formulario {
+    width: 30%;
+    float:left;
+}
+
+h5{
+    color:black;
+}
+
+.menu{
+    text-align:center;
+    color:white;
+    margin: 10px 10px 0px 10px;
+}
+
+.submenu{
+    margin-left: 15%;
+    display: none;
+}
+
+#mensaje_error{
+    color: red;
+    font-size: small;
+}
+
+.botones {
+    color: black;
+    padding: 10px;
+    text-decoration:none;  
+    border-radius: 10px;
+}
+
+.scrollable{
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+}
+
+.first_color{
+    background-color: black;
+}
+
+.second_color{
+    background-color: #eeeeee;
+}
+
+.first_color_ico{
+    color: black;
+}
+
+.second_color_ico{
+    color: #eeeeee;
+}
+
+
+.first_color_txt{
+    color: black;
+}
+
+.second_color_txt{
+    color: white;
+}
+
+.tipo_fuente{
+}
+
+.second_font{
+    font-family : 'PT Sans', Verdana, Sans-serif;
+}
+
+.res {
+    position:absolute; 
+    bottom:0%; 
+    right:0%; 
+    margin:0 10px 10px 0;
+}
+
+#tabla_restaurantes{
+    display: none;
+}
+
+.pagina{
+    margin: 10px 10px 10px 10px;
+}
+
+#paginador{
+    position:absolute; 
+    right:0%;
+}

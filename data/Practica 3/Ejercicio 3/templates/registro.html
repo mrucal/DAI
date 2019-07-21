@@ -1,0 +1,31 @@
+{% if editar %}
+  {% extends "index_login.html" %}
+{% else %}
+  {% extends "index_no_login.html" %}
+{% endif %}
+
+{% block section %}
+<form action="/confirmarregistro" method="post">
+    <div>
+        <label for="Nombre">(*) Nombre:</label>
+        <input type="text" name="nombre" value = "{{ nombre }}"" />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" value = "{{ email }}" />
+    </div>
+    <div>
+        <label for="username">(*) Nombre de usuario:</label>
+        <input type="text" name="username" value = "{{ user }}" />
+    </div>
+    <div>
+        <label for="password">(*) Contraseña:</label>
+        <input type="password" name="password" />
+    </div>
+    <div class="button">
+        <button type="submit">Aceptar</button>
+    </div>
+</form>
+<div id='mensaje_error'><p>{{ mensaje_error }}</p></div>
+{% endblock %}
+

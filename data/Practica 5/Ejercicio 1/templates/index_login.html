@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+
+{% block formulario %}
+
+<p>Bienvenido {{ username }}!!</p>
+
+<a class = "botones second_color first_color_tx"t href="http://127.0.0.1:8080/logout" >Logout</a>
+
+{% endblock %}
+
+{% block section %}
+    <h1 class="first_color_txt tipo_fuente">Título</h1>
+	<p class="first_color_txt tipo_fuente">Párrafo 1</p>
+	<p class="first_color_txt tipo_fuente">Párrafo 2</p>
+	<h4 class="first_color_txt tipo_fuente">Enalces de interés</h4>
+	<a class="tipo_fuente" href="/enlace?e=http://www.ugr.es&nombre=UGR">UGR</a><br>
+	<a class="tipo_fuente" href="/enlace?e=http://etsiit.ugr.es/&nombre=ETSIIT">ETSIIT</a><br>
+	<a class="tipo_fuente" href="/enlace?e=https://swad.ugr.es/es&nombre=SWAD">SWAD</a>
+    
+{% endblock %}
+
+
+{% block nav_hijo %}
+<h4 class='botones first_color second_color_txt tipo_fuente menu' id='m1'>Perfil</h4>
+<div style="background-color: #6699FF; margin: 0 20px 0 20px;">
+	<ul class="list-unstyled submenu" id="sm1">
+    	<li><a style="color:black;" href= '/{{ username }}'><h5>Ver</h5></a></li>
+    	<li><a style="color:black;" href= '/editar/{{ username }}'><h5>Editar</h5></a></li>
+	</ul>
+</div>
+
+
+<h4 class='botones first_color second_color_txt tipo_fuente menu' id='m2'>Historial</h4>
+<div style="background-color: #6699FF; margin: 0 20px 0 20px;">
+	<ul class="list-unstyled submenu" id="sm2">
+	    <li><a style="color:black;" href= {{ h.e1 }}><h5>{{ h.n1 }}</h5></a></li>
+	    <li><a style="color:black;" href= {{ h.e2 }}><h5>{{ h.n2 }}</h5></a></li>
+	    <li><a style="color:black;" href= {{ h.e3 }}><h5>{{ h.n3 }}</h5></a></li>
+	</ul>
+</div>
+
+<h4 class='botones first_color second_color_txt tipo_fuente menu' id='m3'>Restaurantes</h4>
+<div style="background-color: #6699FF; margin: 0 20px 0 20px;">
+	<ul class="list-unstyled submenu" id="sm3">
+		<li><a style="color:black;" href= '/restaurantes?tb=cocina'><h5>Tipo Cocina</h5></a></li>
+		<li><a style="color:black;" href= '/restaurantes?tb=Barrio'><h5>Barrio</h5></a></li>
+		<li><a style="color:black;" href= '/restaurantes?tb=Distrito'><h5>Distrito</h5></a></li>
+	</ul>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+header {
+    width:450;
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+    height: 150px;
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:150px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+
+#cabecera {
+    width: 450;
+
+}
+
+#imagen {
+    width: 10%;
+    float:left;
+    height: 150px;
+}
+
+#titulo {
+    width: 60%;
+    float:left;
+    text-align: center;
+}
+
+#formulario {
+    width: 30%;
+    float:left;
+}
+
+#menu{
+	list-style: none
+}
+
+#mensaje_error{
+    color: red;
+    font-size: small;
+}
+
+.botones {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    text-decoration:none;  
+    border-radius: 10px;
+}

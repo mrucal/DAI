@@ -1,0 +1,17 @@
+{% extends "index_login.html" %}
+
+{% block section %}
+
+
+      <form action="{% url 'nuevo_restaurante' %}" method="post">
+   		<div class="form-group">
+   			{% csrf_token %}
+   			{{ form.as_p }}
+   			<input type="submit" value="Añadir" />
+   		</div>
+   	</form>
+   
+
+{% endblock %}
+
+

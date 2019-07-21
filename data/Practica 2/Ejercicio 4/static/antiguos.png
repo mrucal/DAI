@@ -1,0 +1,54 @@
+def renderizaMandelbrot(x1, y1, x2, y2, ancho, iteraciones, nombreFicheroPNG):
+	# drawing area
+	xa = x1
+	xb = x2
+	ya = y1 + 0.000001
+	yb = y2
+	maxIt = iteraciones
+	# image size
+	imgx = ancho
+	imgy = int(abs (y2 - y1) * ancho / abs(x2 - x1));
+	
+	image = Image.new("RGB", (imgx, imgy))
+
+	for y in range(imgy):
+	    zy = y * (yb - ya) / (imgy - 1) + ya
+	    for x in range(imgx):
+    		zx = x * (xb - xa) / (imgx - 1) + xa
+    		z = zx + zy * 1j
+    		c = z
+    		for i in range(maxIt): 
+                if abs(z)>2.0: 
+                    break
+    		    z = z * z + c
+    		if (i >= maxIt):
+                image.putpixel((x, y), (0, 0, 0))
+            else:
+                image.putpixel((x, y), (i % 4 * 64, i % 8 * 32, i % 16 * 16))
+
+	image.save(nombreFicheroPNG, "PNG")
+
+
+
+	'''
+   <html>
+		<head>
+			<title></title>
+		</head>
+
+		<body>
+			<img src="{{url_for('static', filename='fractalWEB.png')}}" />
+		</body>
+	</html>'''
+
+
+
+	x1 = float(request.args.get('x1'))
+	y1 = float(request.args.get('y1'))
+	x2 = float(request.args.get('x2'))
+	y2 = float(request.args.get('y2'))
+	anchura = int(request.args.get('anchura'))
+	mandelbrot.renderizaMandelbrotBonito(x1, y1, x2, y2, anchura, 100, 'fractalWEB.png', [(0,0,255),(255,0,0),(0,255,0)], 16)
+
+
+	mandelbrot.renderizaMandelbrotBonito(float(x1), float(y1),float(x2), float(x2), int(300, 100, 'fractalWEB.png', [(0,0,255),(255,0,0),(0,255,0)], 16)

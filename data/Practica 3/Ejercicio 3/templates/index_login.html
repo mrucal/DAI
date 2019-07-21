@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+
+{% block formulario %}
+
+<p>Bienvenido {{ name }}!!</p>
+
+<a class = "botones" href="http://127.0.0.1:8080/logout" >Logout</a>
+
+{% endblock %}
+
+{% block section %}
+    <h1>Título</h1>
+	<p>Párrafo 1</p>
+	<p>Párrafo 2</p>
+	<h4>Enalces de interés</h4>
+	<a href="/enlace?e=http://www.ugr.es&nombre=UGR">UGR</a><br>
+	<a href="/enlace?e=http://etsiit.ugr.es/&nombre=ETSIIT">ETSIIT</a><br>
+	<a href="/enlace?e=https://swad.ugr.es/es&nombre=SWAD">SWAD</a>
+    
+{% endblock %}
+
+
+{% block nav %}
+<h4>Perfil:</h4>
+<ul id="menu">
+    <li><a href= '/{{ name }}'>Ver</a></li>
+    <li><a href= '/editar/{{ name }}'>Editar</a></li>
+</ul>
+<h4>Historial:</h4>
+<ul id="menu">
+    <li><a href= {{ e1 }}>{{ n1 }}</a></li>
+    <li><a href= {{ e2 }}>{{ n2 }}</a></li>
+    <li><a href= {{ e3 }}>{{ n3 }}</a></li>
+</ul>
+{% endblock %}

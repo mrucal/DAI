@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link href="./static/style.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block header %}
+<div id="cabecera">
+    <div id="imagen">
+        <a href="/"><img src="/static/logo.png" /></a>
+    </div>
+
+    <div id="titulo">
+        <h1>Mi Página</h1>
+        <h3>Subtítulo</h3>
+    </div>
+
+    <div id="formulario">
+
+    {% block formulario %}{% endblock %}
+        
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block footer %}
+Copyright
+{% endblock %}

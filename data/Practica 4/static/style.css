@@ -1,0 +1,98 @@
+html {
+height: 100%;
+}
+body {
+height: 100%;
+margin: 0px;
+padding: 0px;
+}
+header {
+    width:450;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+    height: 20%;
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:75%;
+    width:20%;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:80%;
+    height:75%;
+    float:left;
+    padding:10px;
+}
+footer {
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+    height:5%;	 	 
+}
+
+#cabecera {
+    width: 450;
+
+}
+
+#imagen {
+    width: 10%;
+    float:left;
+    height: 150px;
+}
+
+#titulo {
+    width: 60%;
+    float:left;
+    text-align: center;
+}
+
+#formulario {
+    width: 30%;
+    float:left;
+}
+
+#menu{
+    margin-left: 20px;
+}
+
+#mensaje_error{
+    color: red;
+    font-size: small;
+}
+
+.botones {
+    color: black;
+    padding: 10px;
+    text-decoration:none;  
+    border-radius: 10px;
+}
+
+.scrollable{
+    max-height: 70%;
+    overflow-y: auto;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+}
+
+#first_color{
+    background-color: black;
+}
+
+#second_color{
+    background-color: #eeeeee;
+}

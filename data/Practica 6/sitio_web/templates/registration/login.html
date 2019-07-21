@@ -1,0 +1,21 @@
+{% extends "index_no_login.html" %}
+
+{% block section %}
+	<div class="container">
+	
+        <form class="form-signin" method="post" action=".">
+        	<h2 class="form-signin-heading">Login</h1>
+                {% csrf_token %}
+
+				{{ form.as_p }}
+           
+                
+		        <p>Not  a member? <a href="{% url 'registration_register' %}">Register</a>!</p>
+		        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+
+        
+
+    </div>
+{% endblock %}
+

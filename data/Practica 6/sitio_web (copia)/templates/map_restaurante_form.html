@@ -1,0 +1,16 @@
+{% extends "index_login.html" %}
+
+{% block section %}
+
+      <form action="{% url 'map_restaurante' %}" method="post">
+   		<div class="form-group">
+   			{% csrf_token %}
+   			{{ form.as_p }}
+   			<input type="submit" value="Buscar" />
+   		</div>
+   	</form>
+   
+
+{% endblock %}
+
+

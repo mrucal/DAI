@@ -1,0 +1,55 @@
+{% extends "index_login.html" %}
+
+{% block section %}
+
+<p id=result><p>
+<form  action="\restaurantes?tb={{ tb}}" method="POST" id='form_busqueda'>
+    <div class="form-group">
+	    <div class="container" >
+	        <div class="row">
+	            <div class="col-md-3 second_color  first_color_txt tipo_fuente" >
+	                <label for="username">{% if not nococina %}
+				    	Tipo de
+				    {% endif %} {{ tb }}:</label>
+	            </div>
+	            <div class="col-md-5" >
+	                <select name="opcion" id='form_opcion' aria-controls="dataTable" class="form-control form-control-sm">
+						{% for i in opciones %}
+						    <option value='{{ i }}'>{{ i }}</option>
+						{% endfor %}
+
+					</select>
+	            </div>
+	        </div>
+	    </div>        
+	</div>
+
+    <input class="btn btn-default second_color  first_color_txt tipo_fuente" id='restaurante-boton' type = "submit" name="enviar" value="Enviar">
+</form>
+
+
+<div id='tabla_restaurantes' class="scrollable">
+	<h3>{{ opcion }}</h3>
+	<div class="scrollable">
+		<table id="customers">
+		  
+		    <th class='first_color  second_color_txt tipo_fuente' style="width:25%">Restaurante ({{ total }} en total)</th>
+		    <th class='first_color  second_color_txt tipo_fuente' style="width:35%">Dirección</th>
+		    {% if nococina %}
+		    	<th class='first_color second_color_txt tipo_fuente' style="width:25%">Tipo Cocina</th>
+		    {% endif %}
+		  <tr>
+			{% for i in encontrados %}
+				<tr>
+					<td class="first_color_txt tipo_fuente">{{ i.nombre }}</td>
+				    <td class="first_color_txt tipo_fuente">{{ i.direccion }}</td>
+				    {% if nococina %}
+				    	<td class="first_color_txt tipo_fuente">{{ i.cocina }}</th>
+				    {% endif %}				    
+				</tr>
+			{% endfor %}
+			
+		  </tr>
+		</table>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link href="./static/style.css" rel="stylesheet" type="text/css" />
+<link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock %}
+
+{% block header %}
+<div class="container" id="cabecera">
+    <div class="row">
+        <div class="col-md-2" id="imagen">
+            <a class="img-responsive" href="/"><img src="/static/logo.png" /></a>
+        </div>
+
+        <div class="col-md-8" id="titulo">
+            <h1>Desarrollo de Aplicaciones en Internet</h1>
+            <h3>Prácticas 4 y 5</h3>
+        </div>
+
+        <div class="col-md-2" >
+
+        {% block formulario %}{% endblock %}
+            
+        </div>
+        
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block nav %}
+<i class = " fa fa-tint res first_color_ico" id="color-boton" style='font-size:30px'></i>
+<i class = " fa fa-font res first_color_ico" id="letra-boton" style='font-size:30px; margin-right: 40px;'></i>
+{% block nav_hijo %}{% endblock %}
+
+{% endblock %}
+
+{% block footer %}
+<p  class="second_color_txt tipo_fuente">Copyright</p>
+{% endblock %}

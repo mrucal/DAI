@@ -1,0 +1,44 @@
+{% extends "index_login.html" %}
+
+{% block section %}
+
+<p id='texto_prueba'></p>
+<form id='myform' action="\restaurantes?tb={{ tb}}" method="POST">
+    <div class="form-group">
+	    <div class="container" >
+	        <div class="row">
+	            <div class="col-md-3 second_color  first_color_txt tipo_fuente" >
+	                <label for="username">{% if not nococina %}
+				    	Tipo de
+				    {% endif %} {{ tb }}:</label>
+	            </div>
+	            <div class="col-md-5" >
+	                <select name="opcion" aria-controls="dataTable" class="form-control form-control-sm">
+						{% for i in opciones %}
+						    <option value='{{ i }}'>{{ i }}</option>
+						{% endfor %}
+
+					</select>
+	            </div>
+	        </div>
+	    </div>        
+	</div>
+
+    <input class="btn btn-default second_color  first_color_txt tipo_fuente" id='restaurante-boton' type = "submit" name="enviar" value="Enviar">
+</form>
+
+<div id='tabla_restaurantes' class="scrollable">
+	<h3 id=opcion_elegida></h3>
+	<div class="scrollable">
+		<table id="customers"'>
+			<tr id='tr_id'>
+				<th id='total' class='first_color  second_color_txt tipo_fuente' style="width:25%">Restaurante </th>
+				<th class='first_color  second_color_txt tipo_fuente' style="width:35%">Dirección</th>
+			</tr>
+		</table>
+	</div>
+	
+</div>
+
+{% endblock %}
+

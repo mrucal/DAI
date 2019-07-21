@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+
+{% block formulario %}
+
+<p>Bienvenido {{ username }}!!</p>
+
+<a class = "botones" id="second_color" href="http://127.0.0.1:8080/logout" >Logout</a>
+
+{% endblock %}
+
+{% block section %}
+    <h1>Título</h1>
+	<p>Párrafo 1</p>
+	<p>Párrafo 2</p>
+	<h4>Enalces de interés</h4>
+	<a href="/enlace?e=http://www.ugr.es&nombre=UGR">UGR</a><br>
+	<a href="/enlace?e=http://etsiit.ugr.es/&nombre=ETSIIT">ETSIIT</a><br>
+	<a href="/enlace?e=https://swad.ugr.es/es&nombre=SWAD">SWAD</a>
+    
+{% endblock %}
+
+
+{% block nav %}
+<h4>Perfil:</h4>
+<ul class="list-unstyled" id="menu">
+    <li><a href= '/{{ username }}'>Ver</a></li>
+    <li><a href= '/editar/{{ username }}'>Editar</a></li>
+</ul>
+<h4>Historial:</h4>
+<ul class="list-unstyled" id="menu">
+    <li><a href= {{ h.e1 }}>{{ h.n1 }}</a></li>
+    <li><a href= {{ h.e2 }}>{{ h.n2 }}</a></li>
+    <li><a href= {{ h.e3 }}>{{ h.n3 }}</a></li>
+</ul>
+<h4>Restaurantes:</h4>
+<ul class="list-unstyled" id="menu">
+	<li><a href= '/restaurantes?tb=cocina'>Tipo Cocina</a></li>
+	<li><a href= '/restaurantes?tb=Barrio'>Barrio</a></li>
+	<li><a href= '/restaurantes?tb=Distrito'>Distrito</a></li>
+</ul>
+{% endblock %}
